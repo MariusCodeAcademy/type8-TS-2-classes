@@ -17,7 +17,12 @@ export default class Employee extends Person {
     this.hoursWorked += valSk;
   }
 
-  calcPay() {}
+  calcPay(): number {
+    // 1. sudauginti isdirbtas val su valandiniu
+    // 2. nunulinti valandas
+    // 3. consoleje pranesti varda ir kiek sumoketi
+    // 4. grazinti skaiciu kiek ismoketi
+  }
 }
 
 // iskviesti tevini konstruktorius su super()

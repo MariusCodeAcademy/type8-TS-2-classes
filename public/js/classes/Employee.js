@@ -8,5 +8,6 @@ export default class Employee extends Person {
     work(valSk) {
         this.hoursWorked += valSk;
     }
-    calcPay() { }
+    calcPay() {
+    }
 }
