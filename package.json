@@ -1,0 +1,27 @@
+{
+  "name": "ts-2-classes",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "tsc -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MariusCodeAcademy/type8-TS-2-classes.git"
+  },
+  "keywords": [],
+  "author": "Marius K.",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MariusCodeAcademy/type8-TS-2-classes/issues"
+  },
+  "homepage": "https://github.com/MariusCodeAcademy/type8-TS-2-classes#readme",
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.20.0",
+    "@typescript-eslint/parser": "^5.20.0",
+    "eslint": "^8.13.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.26.0"
+  }
+}
