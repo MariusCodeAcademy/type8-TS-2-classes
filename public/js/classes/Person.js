@@ -1,6 +1,6 @@
 export default class Person {
     constructor(name, age) {
-        this.id = '';
+        this.id = `id_${Math.round(Math.random() * 100000000)}`;
         this.name = name;
         this.age = age;
     }
