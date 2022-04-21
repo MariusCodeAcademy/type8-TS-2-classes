@@ -9,6 +9,19 @@ interface User {
   role: 'admin' | 'editor';
 }
 
+interface ReadOnlyUser extends User {
+  readonly name: string;
+  readonly id: number;
+  readonly role: 'admin' | 'editor';
+}
+
+const readU: ReadOnlyUser = {
+  name: 'Jill',
+  id: 42,
+  role: 'editor',
+};
+// readU.role = 'admin'; //err
+
 interface AdminUser extends User {
   role: 'admin'; // perrasom role taisykle
   logName(prefix: string): void;
@@ -20,6 +33,7 @@ const user: User = {
   id: 15,
   role: 'admin',
 };
+user.name = 'Jill';
 const adUsr: AdminUser = {
   name: 'Mike Admin',
   id: 55,

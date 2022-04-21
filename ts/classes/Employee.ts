@@ -1,7 +1,12 @@
-import Person from './Person.js';
+import Person, { PersonInterface } from './Person.js';
+
+interface EmployeeInterface extends PersonInterface {
+  work(valSk: number): void;
+  // status: boolean;
+}
 
 // sukurti Employee class pralecian Person clase
-export default class Employee extends Person {
+export default class Employee extends Person implements EmployeeInterface {
   // prideti 2 private savybes hoursWorked ir payPerHour
   private hoursWorked: number;
   private payPerHour: number;

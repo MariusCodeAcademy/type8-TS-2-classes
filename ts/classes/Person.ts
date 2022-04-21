@@ -1,13 +1,14 @@
-interface PersonInterface {
+export interface PersonInterface {
   id: string;
   name: string;
   age: number;
   greet(): void;
 }
-export default class Person implements PersonInterface {
+export default abstract class Person implements PersonInterface {
   id: string;
   name: string;
   age: number;
+
   constructor(name: string, age: number) {
     this.id = `id_${Math.round(Math.random() * 100000000)}`;
     this.name = name;
@@ -17,4 +18,6 @@ export default class Person implements PersonInterface {
   greet() {
     console.log(`Hello, I am ${this.name}, and I am ${this.age} years old. `);
   }
+  // abstraktus metodas turi buti aprasyta vaikinese klasese.
+  abstract calcPay(): number;
 }

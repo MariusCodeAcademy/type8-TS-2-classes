@@ -1,9 +1,9 @@
 import Employee from './classes/Employee.js';
 import Person from './classes/Person.js';
 
-const p1 = new Person('James', 40);
-console.log('p1 ===', p1);
-p1.greet();
+// const p1 = new Person('James', 40);
+// console.log('p1 ===', p1);
+// p1.greet();
 
 // sukuriam darbuotojus
 const e1 = new Employee('Mike', 35, 15);
