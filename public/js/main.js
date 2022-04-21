@@ -1,5 +1,6 @@
 import Employee from './classes/Employee.js';
 import Partner from './classes/Partner.js';
+import Person from './classes/Person.js';
 import Project from './classes/Project.js';
 const e1 = new Employee('Mike', 35, 15);
 const e2 = new Employee('Jill', 37, 17);
@@ -23,4 +24,6 @@ console.log('parJohn ===', parJohn);
 parJill.addProject(pr3);
 parJill.addProject(pr5);
 console.log('parJill ===', parJill);
-parJohn.workDone('id_456');
+parJohn.workDone('pr_2');
+console.log('Person.count ===', Person.count);
+[pr1, pr2, pr3, pr4, pr5].forEach((pr) => console.log(pr));

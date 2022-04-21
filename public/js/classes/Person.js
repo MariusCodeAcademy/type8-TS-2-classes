@@ -1,6 +1,7 @@
 export default class Person {
     constructor(name, age) {
-        this.id = `id_${Math.round(Math.random() * 100000000)}`;
+        Person.count++;
+        this.id = `id_${Person.count}`;
         this.name = name;
         this.age = age;
     }
@@ -8,3 +9,4 @@ export default class Person {
         console.log(`Hello, I am ${this.name}, and I am ${this.age} years old. `);
     }
 }
+Person.count = 0;

@@ -4,6 +4,7 @@ interface ProjectInterface {
 }
 
 export default class Project implements ProjectInterface {
+  static projectCount: number = 0;
   private _id: string;
   private _done: boolean = false;
   // readonly done: boolean;
@@ -11,7 +12,7 @@ export default class Project implements ProjectInterface {
   private _price: number;
 
   constructor(title: string, price: number) {
-    this._id = `pr_${Math.round(Math.random() * 100000000)}`;
+    this._id = `pr_${++Project.projectCount}`;
     this._title = title;
     this._price = price;
   }
@@ -20,6 +21,10 @@ export default class Project implements ProjectInterface {
   get done(): boolean {
     // validacija
     return this._done;
+  }
+
+  get id(): string {
+    return this._id;
   }
 
   finishProject(): void {

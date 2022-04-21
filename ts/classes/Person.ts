@@ -5,12 +5,17 @@ export interface PersonInterface {
   greet(): void;
 }
 export default abstract class Person implements PersonInterface {
+  // statine savyvybe, bendra ir priskiriama visai klasei
+  // iskvieciama arba pasiekiama <ClassesPav>.<savybe>
+  // Person.count
+  static count: number = 0;
   id: string;
   name: string;
   age: number;
 
   constructor(name: string, age: number) {
-    this.id = `id_${Math.round(Math.random() * 100000000)}`;
+    Person.count++;
+    this.id = `id_${Person.count}`;
     this.name = name;
     this.age = age;
   }

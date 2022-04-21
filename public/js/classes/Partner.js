@@ -14,6 +14,13 @@ export default class Partner extends Person {
         }
     }
     workDone(prId) {
+        const found = this._projects.find((prObj) => prObj.id === prId);
+        if (!found) {
+            console.warn('project not found', prId);
+            return;
+        }
+        console.log('found ===', found);
+        found.finishProject();
     }
     calcPay() {
         return 1;

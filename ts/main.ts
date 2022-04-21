@@ -50,5 +50,9 @@ parJill.addProject(pr5);
 console.log('parJill ===', parJill);
 // patikrinti konsole ar yra sudeti projektai
 
-// parJohn pabaigia pirmaji savo projekta su id_456
-parJohn.workDone('id_456');
+// parJohn pabaigia pirmaji savo projekta su pr_2
+parJohn.workDone('pr_2');
+
+console.log('Person.count ===', Person.count);
+
+[pr1, pr2, pr3, pr4, pr5].forEach((pr) => console.log(pr));
