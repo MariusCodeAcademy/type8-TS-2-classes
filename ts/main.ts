@@ -1,5 +1,6 @@
 import Employee from './classes/Employee.js';
 import Person from './classes/Person.js';
+import Project from './classes/Project.js';
 
 // const p1 = new Person('James', 40);
 // console.log('p1 ===', p1);
@@ -17,3 +18,8 @@ e2.work(80);
 e2.greet();
 
 [e1, e2].forEach((eObj: Employee) => eObj.calcPay());
+
+const pr1 = new Project('footer', 150);
+// pr1.done = true;
+pr1.finishProject();
+console.log('pr1 ===', pr1);
