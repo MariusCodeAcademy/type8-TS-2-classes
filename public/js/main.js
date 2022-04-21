@@ -10,4 +10,4 @@ e1.work(20);
 e1.work(5);
 e2.work(80);
 e2.greet();
-console.log([e1, e2]);
+[e1, e2].forEach((eObj) => eObj.calcPay());
