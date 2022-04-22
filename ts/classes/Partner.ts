@@ -45,11 +45,11 @@ export default class Partner extends Person {
     // });
     // debugger;
     let total = doneProjects.reduce((total: number, pObj: Project, idx: number) => {
-      console.log(`index: ${idx} total: ${total}`);
+      // console.log(`index: ${idx} total: ${total}`);
       return total + pObj.price;
     }, 0);
 
-    console.log('total ===', total);
+    // console.log('total ===', total);
     // susumuoti atliktu darbu price (reduce, forEach, map)
     // is _projects istrinti atliktu darbus (filter)
     this.clearDoneProject();

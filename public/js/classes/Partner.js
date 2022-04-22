@@ -26,10 +26,8 @@ export default class Partner extends Person {
         const doneProjects = this._projects.filter((pObj) => pObj.done === true);
         console.log('doneProjects ===', doneProjects);
         let total = doneProjects.reduce((total, pObj, idx) => {
-            console.log(`index: ${idx} total: ${total}`);
             return total + pObj.price;
         }, 0);
-        console.log('total ===', total);
         this.clearDoneProject();
         console.log(`🤑 Partner ${this.name} is about to be payed ${total}eur`);
         return total;

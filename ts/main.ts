@@ -54,8 +54,42 @@ parJill.addProject(pr5);
 parJohn.workDone('pr_2');
 parJohn.workDone('pr_1');
 
-const toPayToJohn = parJohn.calcPay();
-console.log('toPayToJohn ===', toPayToJohn);
+// const toPayToJohn = parJohn.calcPay();
+// console.log('toPayToJohn ===', toPayToJohn);
 // console.log('Person.count ===', Person.count);
 
+parJill.workDone('pr_5');
+
 // [pr1, pr2, pr3, pr4, pr5].forEach((pr) => console.log(pr));
+
+let workersArr: (Employee | Partner)[] = [];
+workersArr = workersArr.concat(e1, e2, parJohn, parJill);
+console.log('workersArr ===', workersArr);
+
+// ismoketi visiems algas ir nunulinti valandas ir isvalyti projektus
+
+const alguArr: number[] = workersArr.map((wObj: Employee | Partner) => {
+  return wObj.calcPay();
+});
+
+console.log('alguArr ===', alguArr);
+
+// paskaiciuoti kiek is viso sumoketa pinigu su reduce
+
+// atrinkti didziausia sumoketa suma su reduce
+
+// sukti cikla per workersArr ir grazinti objektu masyva kuriame yra vardas ir kiek ismoketa
+// [
+//   {
+//     name: 'James',
+//     pay: 1540,
+//   },
+//   ....
+// ];
+
+// is workersArr grazinti objekta kuriame key yra vardas, o value yra kiek sumoketi
+// {
+//   James: 1458,
+//   Jill: 400,
+//   ....
+// }

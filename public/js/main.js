@@ -23,5 +23,11 @@ parJill.addProject(pr3);
 parJill.addProject(pr5);
 parJohn.workDone('pr_2');
 parJohn.workDone('pr_1');
-const toPayToJohn = parJohn.calcPay();
-console.log('toPayToJohn ===', toPayToJohn);
+parJill.workDone('pr_5');
+let workersArr = [];
+workersArr = workersArr.concat(e1, e2, parJohn, parJill);
+console.log('workersArr ===', workersArr);
+const alguArr = workersArr.map((wObj) => {
+    return wObj.calcPay();
+});
+console.log('alguArr ===', alguArr);
