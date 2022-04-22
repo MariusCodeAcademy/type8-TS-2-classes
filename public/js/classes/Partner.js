@@ -19,10 +19,22 @@ export default class Partner extends Person {
             console.warn('project not found', prId);
             return;
         }
-        console.log('found ===', found);
+        console.log(` 👷‍♂️ Partner "${this.name}" finished ${found.title}`);
         found.finishProject();
     }
     calcPay() {
-        return 1;
+        const doneProjects = this._projects.filter((pObj) => pObj.done === true);
+        console.log('doneProjects ===', doneProjects);
+        let total = doneProjects.reduce((total, pObj, idx) => {
+            console.log(`index: ${idx} total: ${total}`);
+            return total + pObj.price;
+        }, 0);
+        console.log('total ===', total);
+        this.clearDoneProject();
+        console.log(`🤑 Partner ${this.name} is about to be payed ${total}eur`);
+        return total;
+    }
+    clearDoneProject() {
+        this._projects = this._projects.filter((pObj) => pObj.done === false);
     }
 }

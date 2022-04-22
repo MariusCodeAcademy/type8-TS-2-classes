@@ -16,7 +16,7 @@ e1.work(5);
 // e2 dirba 80 val
 
 e2.work(80);
-e2.greet();
+// e2.greet();
 
 // [e1, e2].forEach((eObj: Employee) => eObj.calcPay());
 
@@ -47,12 +47,15 @@ parJill.addProject(pr3);
 parJill.addProject(pr5);
 // parJill priskiriam fakePr projekta
 // parJill.addProject(fakePr); // err
-console.log('parJill ===', parJill);
+// console.log('parJill ===', parJill);
 // patikrinti konsole ar yra sudeti projektai
 
 // parJohn pabaigia pirmaji savo projekta su pr_2
 parJohn.workDone('pr_2');
+parJohn.workDone('pr_1');
 
-console.log('Person.count ===', Person.count);
+const toPayToJohn = parJohn.calcPay();
+console.log('toPayToJohn ===', toPayToJohn);
+// console.log('Person.count ===', Person.count);
 
-[pr1, pr2, pr3, pr4, pr5].forEach((pr) => console.log(pr));
+// [pr1, pr2, pr3, pr4, pr5].forEach((pr) => console.log(pr));
