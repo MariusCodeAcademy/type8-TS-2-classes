@@ -12,10 +12,14 @@ export default class Employee extends Person implements EmployeeInterface {
   private payPerHour: number;
 
   // construktoriuje nustatys hoursWorked = 0, payPerHour gauta argumentu
-  constructor(name: string, age: number, hourlyPay: number) {
+  constructor(name: string, age: number, payPerHour: number) {
     super(name, age);
     this.hoursWorked = 0;
-    this.payPerHour = hourlyPay;
+    this.payPerHour = payPerHour;
+  }
+
+  get hourlyPay(): number {
+    return this.payPerHour;
   }
 
   work(valSk: number): void {

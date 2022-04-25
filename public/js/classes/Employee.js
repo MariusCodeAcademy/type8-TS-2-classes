@@ -1,9 +1,12 @@
 import Person from './Person.js';
 export default class Employee extends Person {
-    constructor(name, age, hourlyPay) {
+    constructor(name, age, payPerHour) {
         super(name, age);
         this.hoursWorked = 0;
-        this.payPerHour = hourlyPay;
+        this.payPerHour = payPerHour;
+    }
+    get hourlyPay() {
+        return this.payPerHour;
     }
     work(valSk) {
         this.hoursWorked += valSk;
