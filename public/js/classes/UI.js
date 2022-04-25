@@ -10,6 +10,7 @@ export default class Ui {
             console.warn('not a mployee or partner');
         }
     }
+    static findWorker(wId) { }
     static generateRows() {
         const tableBody = Ui.tBodyEl;
         if (!tableBody) {

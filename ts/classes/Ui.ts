@@ -16,6 +16,8 @@ export default class Ui {
     }
   }
 
+  static findWorker(wId: string): Employee | Partner {}
+
   static generateRows() {
     const tableBody = Ui.tBodyEl;
     if (!tableBody) {
