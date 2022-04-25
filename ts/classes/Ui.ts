@@ -29,12 +29,21 @@ export default class Ui {
       newRow.innerHTML = `
         <td>${pObj.id}</td>
         <td>${pObj.name}</td>
-        <td>${pObj.age}</td>
-        <td>kai tipas yra employee tai ta ir parodome </td>
-        <td>pay</td>
-        <td>dirbo val</td>
+        <td>${pObj.age}</td>`;
+      if (pObj instanceof Employee) {
+        newRow.innerHTML += `
+        <td>Employee </td>
+        <td>${pObj.hourlyPay}</td>
+        <td>${pObj.hours}</td>
         <td>sumoketi</td>
     `;
+      } else {
+        newRow.innerHTML += `
+        <td>Partner </td>
+        <td></td>
+        <td></td>
+        <td>sumoketi</td>`;
+      }
     });
   }
 }

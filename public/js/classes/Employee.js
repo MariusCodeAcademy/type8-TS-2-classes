@@ -8,6 +8,9 @@ export default class Employee extends Person {
     get hourlyPay() {
         return this.payPerHour;
     }
+    get hours() {
+        return this.hoursWorked;
+    }
     work(valSk) {
         this.hoursWorked += valSk;
     }

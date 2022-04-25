@@ -22,6 +22,10 @@ export default class Employee extends Person implements EmployeeInterface {
     return this.payPerHour;
   }
 
+  get hours(): number {
+    return this.hoursWorked;
+  }
+
   work(valSk: number): void {
     this.hoursWorked += valSk;
   }

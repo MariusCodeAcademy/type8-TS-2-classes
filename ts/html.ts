@@ -1,4 +1,5 @@
 import Employee from './classes/Employee.js';
+import Partner from './classes/Partner.js';
 import Ui from './classes/Ui.js';
 
 console.log('html js');
@@ -24,12 +25,21 @@ function handleForm(e: SubmitEvent) {
   // create employee
   const name: string = nameEl?.value || '';
   const age: number = ageEl?.valueAsNumber || 0;
-  const pay: number = payPerHourEl?.valueAsNumber || 0;
-  const e1 = new Employee(name, age, pay);
-  console.log('e1 ===', e1);
+  const workerTypeVal: string = workerTypeSelectEl?.value || '';
+
+  // patikrinti ar kuriam Employee ar partneri
+  if (workerTypeVal === 'em') {
+    const pay: number = payPerHourEl?.valueAsNumber || 0;
+    const e1 = new Employee(name, age, pay);
+    Ui.addWorker(e1);
+  } else {
+    const p1 = new Partner(name, age);
+    Ui.addWorker(p1);
+  }
+
+  // console.log('e1 ===', e1);
   // ideti e1 i Ui masyva
 
-  Ui.addWorker(e1);
   console.log('Ui ===', Ui.workers);
 }
 
